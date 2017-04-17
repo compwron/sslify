@@ -12,11 +12,14 @@ pip install -r requirements.txt # install dependencies
 cd aws_infrastructure/sslify
 
 # USAGE: python sslify.py <term> <team> <env>
+# This requests a letsencrypt cert for a particular environment
 python sslify.py 54 5 qa
-
 # Now everything should work; go to your environment and check!
  
-# Note: this does NOT implement force auto-redirect to ssl
+# USAGE: python sslify.py <term> <team> <env> redirect_only
+# This adds forced redirect for http to https
+# This should be run AFTER the previous command or you will see redirects that go nowhere or go to error pages
+python sslify.py 54 5 qa redirect_only
 ```
 
 ## Development:
@@ -29,5 +32,4 @@ pytest test_sslify.py::TestSslify::test_matches_env_CI # run only one test
     
 ## TODO
 
-- This code base needs a lot of refactoring and unit testing.  
-- Implement force auto-redirect to ssl
+- Rewrite in Java because that is what the rest of 
