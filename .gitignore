@@ -1,0 +1,12 @@
+*-project.conf
+out.conf
+project.conf
+*.pyc
+.coverage
+htmlcov/
+out*.conf
+file_with_https_redirect_project.conf
+project.conf.*
+.DS_Store
+.cache/
+backup*.conf

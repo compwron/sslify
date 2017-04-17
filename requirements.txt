@@ -1,0 +1,5 @@
+git+git://github.com/fatiherikli/nginxparser.git@cb4a86#egg=nginxparser
+pytest==3.0.7
+coverage==3.7.1
+pytest-cov==2.4.0
+flexmock==0.10.2
